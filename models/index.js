@@ -1,6 +1,6 @@
 // import models
 const User = require("./User");
-const Pick = require("./Picks");
+const Pick = require("./Pick");
 
 // Users have many Picks
 User.hasMany(Pick, {

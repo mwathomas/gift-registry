@@ -2,28 +2,28 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 
-class ProductTag extends Model {}
+class Pick extends Model {}
 
-ProductTag.init(
+Pick.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
+    title: {
+      type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
-    product_id: {
+    description: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "product",
-        key: "id",
+    },
+    url: {
+      type: DataTypes.STRING,
+      Validate: {
+        is: true,
       },
     },
-    tag_id: {
+    user_email: {
       type: DataTypes.INTEGER,
       references: {
-        model: "tag",
-        key: "id",
+        model: "user",
+        key: "email",
       },
     },
   },
@@ -32,8 +32,8 @@ ProductTag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "product_tag",
+    modelName: "pick",
   }
 );
 
-module.exports = ProductTag;
+module.exports = Pick;
