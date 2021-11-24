@@ -1,7 +1,10 @@
 const router = require("express").Router();
-const { User, Pick } = require("../models");
 
-router.get("/", async (req, res) => {});
+router.get("/", async (req, res) => {
+  res.render("login");
+});
+
+module.exports = router;
 
 //   try {
 //     const dbGalleryData = await Gallery.findAll({
