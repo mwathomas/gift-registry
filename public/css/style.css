@@ -1,16 +1,18 @@
 :root {
-  --primary: pink;
+  --primary: rgba(238, 147, 208, 0.836);
   --secondary: gray;
-  --tertiary: rgb(231, 44, 231);
-  --quatrinary: #6c6b67;
-  --light: #e3e4e3;
-  --dark: #570957;
+  --tertiary: rgba(238, 147, 208, 0.836);
+  --quatrinary: black;
+  --light: black;
+  --dark: #000000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
 
 body {
-  font-family: Arial;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -42,9 +44,10 @@ main {
 }
 
 aside {
-  flex: 0;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--tertiary);
-  padding: 80px;
+  padding: 50px;
   text-align: left;
   color: var(--light);
 }
@@ -72,8 +75,8 @@ nav a:hover {
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .btn-no-style {
@@ -89,7 +92,8 @@ nav a:hover {
 
 img {
   max-width: 100%;
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* CARDS */
@@ -105,19 +109,15 @@ img {
 .login-card {
   margin: 0 0 20px 0;
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 70%;
   padding: 5px;
   border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  border-style: double;
-  border-width: thick;
   background-color: var(--primary);
   color: var(--light);
 }
 
 .card header {
   color: var(--light);
-  font-weight: bold;
   text-transform: uppercase;
   margin: 0;
   background-color: var(--tertiary);
@@ -126,9 +126,8 @@ img {
 }
 
 .card-body {
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
-  font-weight: bold;
 }
 
 .gallery-name {

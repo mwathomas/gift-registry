@@ -4,26 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FTGWHE</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1>For the girl who has everything</h1>
+      <img
+        src="/images/For the girl who has everything.jpg"
+        alt="Logo"
+        width="300"
+        height="300"
+      />
+      <aside>
+        <h2>give her what she wants</h2>
+      </aside>
     </header>
     <nav>
-      <a href="/">Search</a>
+      <a href="/">search</a>
       {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
+        <button id="logout" class="btn-no-style">logout</button>
       {{else}}
-        <a href="/login">Login</a>
+        <a href="/login">login</a>
       {{/if}}
     </nav>
     <main>
-      <aside>
-        <h2>Give her what she wants</h2>
-      </aside>
       <div class="gallery">
         {{{body}}}
       </div>
