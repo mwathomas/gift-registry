@@ -9,20 +9,13 @@ class User extends Model {}
 // set up fields and rules for Product model
 User.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    name: {
+    email: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    city: {
-      type: DataTypes.STRING,
     },
   },
   {
