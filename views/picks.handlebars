@@ -1,0 +1,8 @@
+<section class="container">
+  <h3 class="picks-page">{{user.email}}</h3>
+  <section class="flex-row justify-center">
+    {{#each user.pick as |pick|}}
+    {{> pick-details}}
+    {{/each}}
+  </section>
+</section>

@@ -20,7 +20,9 @@ Pick.init(
       },
     },
     user_email: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
       references: {
         model: "user",
         key: "email",
