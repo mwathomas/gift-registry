@@ -22,13 +22,14 @@
       </aside>
     </header>
     <nav>
-      <a href="/">search</a>
+      <a href="/">Home</a>
       {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-        <a href="/login">login</a>
+        <a href="/">Login</a>
       {{/if}}
     </nav>
+
     <main>
       <div class="gallery">
         {{{body}}}

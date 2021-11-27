@@ -15,7 +15,6 @@ User.init(
       allowNull: false,
       unique: true,
       primaryKey: true,
-      
       validate: {
         isEmail: true,
       },
