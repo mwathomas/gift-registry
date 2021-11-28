@@ -7,7 +7,8 @@ User.hasMany(Pick, {
   foreignKey: "user_email",
 });
 
-module.exports = {
-  Pick,
-  User,
-};
+Pick.belongsTo(User, {
+  foreignKey: "user_email",
+});
+
+module.exports = { User, Pick };

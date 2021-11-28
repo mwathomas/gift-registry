@@ -6,23 +6,16 @@ router.get("/", (req, res) => res.render("login"));
 
 router.get("/:email", async (req, res) => {
   try {
-    const dbGalleryData = await User.findByPk(req.params.email, {
+    const dbUserData = await User.findByPk(req.params.email, {
       include: [
         {
           model: Pick,
-          attributes: ["title", "description", "url", "user_email"],
+          attributes: ["id", "title", "url", "user_email", "description"],
         },
       ],
     });
-
-    const galleries = dbGalleryData.get((gallery) =>
-      gallery.get({ plain: true })
-    );
-
-    res.render("picks", {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
+    const user = dbUserData.get({ plain: true });
+    res.render("pick", { user, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

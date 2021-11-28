@@ -1,7 +1,7 @@
 :root {
-  --primary: rgba(238, 147, 208, 0.836);
+  --primary: rgba(241, 132, 199);
   --secondary: gray;
-  --tertiary: rgba(238, 147, 208, 0.836);
+  --tertiary: rgba(241, 132, 199);
   --quatrinary: black;
   --light: black;
   --dark: #000000;
@@ -30,7 +30,6 @@ a:visited {
 }
 
 header {
-  padding: 40px;
   text-align: center;
   background: var(--primary);
   color: var(--light);
@@ -42,17 +41,9 @@ main {
   flex-grow: 1;
 }
 
-aside {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--tertiary);
-  padding: 50px;
-  text-align: left;
-  color: var(--light);
-}
-
 nav {
   display: flex;
+  font-size: 10px;
   background-color: var(--secondary);
 }
 
@@ -71,11 +62,12 @@ nav a:hover {
 .gallery {
   flex: 4;
   background-color: #fff;
-  padding: 50px;
+  padding-top: 10px;
+  padding-left: 50px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-no-style {
@@ -91,8 +83,9 @@ nav a:hover {
 
 img {
   max-width: 100%;
-  display: flex;
   flex-wrap: wrap;
+  height: 200px;
+  width: 200px;
 }
 
 /* CARDS */
@@ -101,14 +94,21 @@ img {
   flex: 0 1 300px;
   border: 7px double var(--dark);
   border-radius: 10px;
-  background-color: var(--light);
-  color: var(--dark);
 }
 
 .login-card {
   margin: 0 0 20px 0;
   flex: 0 0 50%;
   max-width: 70%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.search-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 100%;
   padding: 5px;
   border: 3px solid var(--dark);
   background-color: var(--primary);

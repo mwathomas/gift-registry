@@ -11,7 +11,7 @@ Pick.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     url: {
       type: DataTypes.STRING,
@@ -22,7 +22,6 @@ Pick.init(
     user_email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       references: {
         model: "user",
         key: "email",
