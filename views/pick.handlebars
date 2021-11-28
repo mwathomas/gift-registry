@@ -1,8 +1,24 @@
-<section class="container">
-  <h3 class="gallery-name">{{user.email}}'s Picks</h3>
-  <section class="flex-row justify-center">
+
+<div class="grid" data-masonry='{"columnWidth": 400, "itemSelector": ".grid-item" }'>
+  <div class="static-banner">{{user.email}}'s picks</div>
+  <div class="grid-item">
     {{#each user.picks as |pick|}}
     {{> pick-details}}
     {{/each}}
-  </section>
-</section>
+    </div>
+    </div>
+{{#if loggedIn}}
+  <div class="grid-item grid-item--width2">
+    <header>add a pick</header>
+    <form class="form add-form">
+      <label for="add-title">title:</label>
+      <input class="form-input" type="text" id="add-title" />
+      <label for="add-url">link to picture:</label>
+      <input class="form-input" type="text" id="add-url" />
+      <label for="add-desc">description:</label>
+      <input class="form-input" type="text" id="add-desc" />
+      <button class="btn btn-primary" type="submit">add</button>
+    </form>
+  </div>
+{{/if}}
+<script src="/path/to/masonry.pkgd.min.js"></script>

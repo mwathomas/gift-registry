@@ -10,23 +10,14 @@
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Georgia";
   font-style: normal;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: flex-start;
-  background-color: var(--quatrinary);
+  background-color: white;
 }
 
 a {
   color: var(--dark);
   text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
 }
 
 header {
@@ -47,27 +38,8 @@ nav {
   background-color: var(--secondary);
 }
 
-nav a {
-  color: var(--light);
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
-}
-
 .gallery {
-  flex: 4;
   background-color: #fff;
-  padding-top: 10px;
-  padding-left: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-no-style {
@@ -88,28 +60,12 @@ img {
   width: 200px;
 }
 
-/* CARDS */
-.card {
-  margin: 20px;
-  flex: 0 1 300px;
-  border: 7px double var(--dark);
-  border-radius: 10px;
-}
-
 .login-card {
-  margin: 0 0 20px 0;
-  flex: 0 0 50%;
-  max-width: 70%;
-  padding: 5px;
-  border: 3px solid var(--dark);
   background-color: var(--primary);
   color: var(--light);
 }
 
 .search-card {
-  margin: 0 0 20px 0;
-  flex: 0 0 100%;
-  padding: 5px;
   border: 3px solid var(--dark);
   background-color: var(--primary);
   color: var(--light);
@@ -117,10 +73,9 @@ img {
 
 .card header {
   color: var(--light);
-  text-transform: uppercase;
   margin: 0;
+  font-size: 20px;
   background-color: var(--tertiary);
-  padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 
@@ -129,21 +84,82 @@ img {
   text-align: center;
 }
 
-.gallery-name {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px var(--secondary);
-  border: 10px groove var(--light);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 100px;
-  padding-left: 100px;
+p {
+  font-size: 10px;
 }
 
 /* LAYOUT */
-.container {
+h3 {
   display: flex;
-  flex-flow: column wrap;
-  align-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+label {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #eee;
+  max-width: 100px;
+}
+
+/* clearfix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 160px;
+  height: 400px;
+  float: left;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 {
+  width: 320px;
+}
+.grid-item--width3 {
+  width: 480px;
+}
+.grid-item--width4 {
+  width: 720px;
+}
+
+.grid-item--height2 {
+  height: 200px;
+}
+.grid-item--height3 {
+  height: 260px;
+}
+.grid-item--height4 {
+  height: 360px;
+}
+
+/* ---- static-banner ---- */
+
+.static-banner {
+  position: absolute;
+  top: 10px;
+  padding: 10px 30px;
+  color: white;
+  background: rgba(241, 132, 199);
+  font-size: 22px;
+  z-index: 4; /* above items */
 }
