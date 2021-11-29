@@ -39,10 +39,11 @@ const signupFormHandler = async (event) => {
   }
 };
 
-function searchFormHandler() {
+const searchFormHandler = async (event) => {
+  event.preventDefault();
   const email = document.querySelector("#email-search").value.trim();
   document.location.replace(`/${email}`);
-}
+};
 
 document
   .querySelector(".login-form")

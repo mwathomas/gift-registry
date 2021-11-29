@@ -1,14 +1,9 @@
 
-<div class="grid" data-masonry='{"columnWidth": 400, "itemSelector": ".grid-item" }'>
   <div class="static-banner">{{user.email}}'s picks</div>
-  <div class="grid-item">
     {{#each user.picks as |pick|}}
     {{> pick-details}}
     {{/each}}
-    </div>
-    </div>
-{{#if loggedIn}}
-  <div class="grid-item grid-item--width2">
+    {{#if loggedIn}}
     <header>add a pick</header>
     <form class="form add-form">
       <label for="add-title">title:</label>
@@ -17,8 +12,7 @@
       <input class="form-input" type="text" id="add-url" />
       <label for="add-desc">description:</label>
       <input class="form-input" type="text" id="add-desc" />
-      <button class="btn btn-primary" type="submit">add</button>
+      <button class="btn btn-primary" id="addBtn" type="submit"></button>
     </form>
-  </div>
-{{/if}}
-<script src="/path/to/masonry.pkgd.min.js"></script>
+     <script src="./js/add.js"></script>
+    {{/if}}

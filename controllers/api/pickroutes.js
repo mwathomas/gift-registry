@@ -7,12 +7,18 @@ router.post("/", async (req, res) => {
       title: req.body.title,
       url: req.body.url,
       description: req.body.description,
+      user_email: req.body.user_email,
     });
-    res.status(200).json(dbPickData);
+
+    req.session.save(() => {
+      res.status(200).json(dbPickData);
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
 
 module.exports = router;
