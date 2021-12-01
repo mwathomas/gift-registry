@@ -4,18 +4,19 @@
     {{> pick-details}}
     {{/each}}
     {{#if loggedIn}}
-    <header>add a pick</header>
+<div class="card">
     <form class="form add-form">
+         <header>add a pick</header>
       <label for="add-title">title:</label>
       <input class="form-input" type="text" id="add-title" />
       <label for="add-url">link to picture:</label>
       <input class="form-input" type="text" id="add-url" />
       <label for="add-desc">description:</label>
       <input class="form-input" type="text" id="add-desc" />
-      <button class="btn btn-primary" id="addBtn" type="submit"></button>
+      <button class="btn btn-primary" id="addBtn" type="submit">add</button>
     </form>
      <script src="./js/add.js"></script>
     {{/if}}
     </div>
-      </div>
+
   

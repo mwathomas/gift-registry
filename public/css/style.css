@@ -9,15 +9,17 @@
   --border-radius: 0.3rem;
 }
 
- body {
+body {
   font-family: "Georgia";
   font-style: normal;
   background-color: white;
 }
 
-a {
+a,
+#logout {
   color: var(--dark);
-  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
 }
 
 header {
@@ -34,12 +36,15 @@ main {
 
 nav {
   display: flex;
-  font-size: 10px;
+  font-size: 14px;
+  height: 40px;
   background-color: var(--secondary);
 }
 
 .gallery {
   background-color: #fff;
+  max-width: 100%;
+  flex: 1;
 }
 
 .btn-no-style {
@@ -61,24 +66,60 @@ img {
 }
 
 .login-card {
-  background-color: var(--primary);
-  color: var(--light);
-}
-
-.search-card {
+  display: inline-grid;
+  width: 300px;
   border: 3px solid var(--dark);
   background-color: var(--primary);
   color: var(--light);
+  border-radius: 10px;
 }
 
+.search-card {
+  display: inline-grid;
+  width: 300px;
+  border: 3px solid var(--dark);
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 10px;
+}
+.card {
+  margin: 10px;
+  display: inline-grid;
+  width: 300px;
+  height: 350px;
+  border: 3px solid var(--dark);
+  color: var(--light);
+  border-radius: 10px;
+}
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-align: center;
+}
 .card header {
   color: var(--light);
-  margin: 0;
+  padding-top: 10px;
   font-size: 20px;
   background-color: var(--tertiary);
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 
+.add-form {
+  display: inline-grid;
+  width: 300px;
+  height: 350px;
+  border: 3px solid var(--dark);
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 10px;
+}
 .card-body {
   font-size: 1rem;
   text-align: center;
@@ -95,8 +136,9 @@ h3 {
   font-size: 30px;
 }
 
-label {
-  font-size: 10px;
+.page-title {
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -105,51 +147,6 @@ label {
 
 body {
   font-family: sans-serif;
-}
-
-/* ---- grid ---- */
-
-.grid {
-  background: #eee;
-  max-width: 100px;
-}
-
-/* clearfix */
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ---- grid-item ---- */
-
-.grid-item {
-  width: 160px;
-  height: 400px;
-  float: left;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
-}
-
-.grid-item--width2 {
-  width: 320px;
-}
-.grid-item--width3 {
-  width: 480px;
-}
-.grid-item--width4 {
-  width: 720px;
-}
-
-.grid-item--height2 {
-  height: 200px;
-}
-.grid-item--height3 {
-  height: 260px;
-}
-.grid-item--height4 {
-  height: 360px;
 }
 
 /* ---- static-banner ---- */
@@ -162,4 +159,4 @@ body {
   background: rgba(241, 132, 199);
   font-size: 22px;
   z-index: 4; /* above items */
-} 
+}
